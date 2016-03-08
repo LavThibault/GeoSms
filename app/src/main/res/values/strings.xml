@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">GeoSms</string>
     <string name="destinataires">Destinataires</string>
-    <string name="dateEnvoi">Date d\'envoi :</string>
+    <string name="dateEnvoi">Date d\'envoi</string>
     <string name="choixDate">Choisir une date</string>
     <string name="choixHeure">Choisir une heure</string>
+    <string name="titreMessage">Titre</string>
+    <string name="choixLieu">Lieu d\'envoi</string>
+    <string name="texteMessage">Message</string>
 
 </resources>

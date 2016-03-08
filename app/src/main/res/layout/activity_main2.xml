@@ -13,101 +13,115 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            >
+            android:background="@color/lightgrey">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@color/lightgrey"
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="72dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/titreMessage"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@color/grey"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="@string/destinataires"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@color/lightgrey"
+                android:orientation="horizontal">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="72dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:background="@color/colorPrimary"
+                    android:layout_height="63dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="@string/choixDate"
-                    />
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:orientation="horizontal"
+                android:background="@color/grey">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="72dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:background="@color/colorPrimaryDark"
-                    android:text="@string/choixHeure"/>
-            <TextView
+                    android:layout_height="63dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/choixHeure"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimary"
-                android:text="@string/choixDate"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimaryDark"
-                android:text="@string/choixHeure"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimary"
-                android:text="@string/choixDate"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimaryDark"
-                android:text="@string/choixHeure"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimary"
-                android:text="@string/choixDate"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimaryDark"
-                android:text="@string/choixHeure"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimary"
-                android:text="@string/choixDate"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimaryDark"
-                android:text="@string/choixHeure"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimary"
-                android:text="@string/choixDate"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="@color/colorPrimaryDark"
-                android:text="@string/choixHeure"/>
+                android:layout_height="63dp"
+                android:orientation="horizontal"
+                android:background="@color/lightgrey">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/choixLieu"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    />
+
+            </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:foregroundGravity="center_vertical"
+                >
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/texteMessage"
+                    android:gravity="center_vertical"
+                    android:background="@color/grey"
+                    android:layout_marginLeft="8dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:gravity="bottom"
+                    android:layout_weight="1"
+                    />
 
-
+            </LinearLayout>
 
 
         </LinearLayout>
+
+
 
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout>
