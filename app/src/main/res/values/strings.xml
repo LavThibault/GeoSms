@@ -7,5 +7,8 @@
     <string name="titreMessage">Titre</string>
     <string name="choixLieu">Lieu d\'envoi</string>
     <string name="texteMessage">Message</string>
+    <string name="alert_dialog_two_buttons_title">Choisir une date</string>
+    <string name="alert_dialog_ok">D\'accord</string>
+    <string name="alert_dialog_cancel">Pas d\'accord</string>
 
 </resources>

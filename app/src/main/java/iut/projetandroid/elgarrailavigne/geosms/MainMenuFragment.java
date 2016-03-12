@@ -7,18 +7,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by POSTE on 08/03/2016.
+ * Created by POSTE on 12/03/2016.
  */
-public class Destinataires extends Fragment {
-
-    public Destinataires newInstance(int index) {
-        Destinataires d = new Destinataires();
+public class MainMenuFragment extends Fragment{
+    public MainMenuFragment newInstance(int index) {
+        MainMenuFragment m = new MainMenuFragment();
 
         Bundle args =new Bundle();
         args.putInt("index", index);
-        d.setArguments(args);
+        m.setArguments(args);
 
-        return d;
+        return m;
     }
 
     public int getShownIndex(){
@@ -28,6 +27,6 @@ public class Destinataires extends Fragment {
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.fragmentdestinataires,container, false);
+        return inflater.inflate(R.layout.mainfragment,container, false);
     }
 }

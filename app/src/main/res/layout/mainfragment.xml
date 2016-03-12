@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/lightgrey">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@color/lightgrey"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/titreMessage"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@color/grey"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:onClick="affichFragmentDestinataires">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/destinataires"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@color/lightgrey"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/choixDate"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:orientation="horizontal"
+                android:background="@color/grey">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/choixHeure"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:orientation="horizontal"
+                android:background="@color/lightgrey">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/choixLieu"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:foregroundGravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/texteMessage"
+                    android:gravity="center_vertical"
+                    android:background="@color/grey"
+                    android:layout_marginLeft="8dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:gravity="bottom"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
