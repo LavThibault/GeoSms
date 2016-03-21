@@ -19,14 +19,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:background="@color/lightgrey"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="@string/titreMessage"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="8dp"/>
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/titre"
+
+                    android:layout_weight="2"
+                    />
 
             </LinearLayout>
 
@@ -51,43 +62,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:background="@color/lightgrey"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:id="@+id/affichDatePicker"
+                android:weightSum="3">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="63dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="@string/choixDate"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="8dp"/>
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:id="@+id/dateView"
+                    android:text=""/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:orientation="horizontal"
-                android:background="@color/grey">
+                android:background="@color/grey"
+                android:weightSum="3">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="63dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="@string/choixHeure"
                     android:gravity="center_vertical"
-                    android:layout_marginLeft="8dp"/>
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/dateSelected"
+                    android:layout_weight="2"
+                    />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:orientation="horizontal"
-                android:background="@color/lightgrey">
+                android:background="@color/lightgrey"
+                android:weightSum="3">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="63dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="@string/choixLieu"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/lieuActuel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Aucun lieu mon gars"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_weight="2"
                     />
 
             </LinearLayout>

@@ -1,53 +1,98 @@
 package iut.projetandroid.elgarrailavigne.geosms;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.DialogFragment;
+import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
-import android.app.DialogFragment;
-import android.content.DialogInterface;
+import android.widget.DatePicker;
 import android.os.Bundle;
 
 /**
  * Created by POSTE on 12/03/2016.
  */
-public class DatePickerDialogFragment extends DialogFragment {
+public class DatePickerDialogFragment extends DialogFragment{
+    OnDateSetListener onDateSetListener;
+    int mDay;
+    int mMonth;
+    int mYear;
 
-    DatePickerDialogFragment newIntance(String title){
-        DatePickerDialogFragment d = new DatePickerDialogFragment();
-        Bundle args = new Bundle();
-        args.putString("title",title);
-        return d;
+    public DatePickerDialogFragment (){
+
+    }
+
+    public void setCallback(OnDateSetListener onDate){
+        onDateSetListener=onDate;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        int style = DialogFragment.STYLE_NORMAL, theme = 0 ;
-        setStyle(style,theme);
+    public void setArguments(Bundle args){
+        super.setArguments(args);
+        mYear=args.getInt("year");
+        mMonth=args.getInt("month");
+        mDay=args.getInt("day");
     }
 
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceBundle){
-        int title = getArguments().getInt("title");
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        return new DatePickerDialog(getActivity(), onDateSetListener, mYear, mMonth, mDay);
+    }
 
-        return new DatePickerDialog.Builder(getActivity())
-                .setTitle(title)
-                .setPositiveButton(R.string.alert_dialog_ok,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ((DatePickerDialogFragment)getActivity()).doPositiveClick();
-                            }
-                        }
-                )
-                .setNegativeButton(R.string.alert_dialog_cancel,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ((DatePickerDialogFragment)getActivity()).doNegativeClick();
-                            }
-                        }
-                )
-                .create();
+ /*   public interface Callbacks{
+        void onDatePicked(Integer day, Integer month, Integer year);
+    }
+
+    private static Callbacks sDummyCallbacks = new Callbacks() {
+        @Override
+        public void onDatePicked(Integer day, Integer month, Integer year) {
+        }
+    };
+
+    private Callbacks mCallbacks = sDummyCallbacks;
+
+
+
+
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        Bundle b = getArguments();
+        mDay=b.getInt("set_day");
+        mMonth=b.getInt("set_month");
+        mYear=b.getInt("set_year");
+
+        DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener(){
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                mDay = dayOfMonth;
+                mMonth = monthOfYear;
+                mYear = year;
+
+                Bundle b = new Bundle();
+                b.putInt("set_day", mDay);
+                b.putInt("set_month", mMonth);
+                b.putInt("set_year", mYear);
+                b.putString("set_date", "Set Date : " + Integer.toString(mDay) + " / " + Integer.toString(mMonth + 1) + " / " + Integer.toString(mYear));
+
+                Message m = new Message();
+                m.setData(b);
+                mHandler.sendMessage(m);
+            }
+        };
+        return new DatePickerDialog(getActivity(), listener, mYear, mMonth, mDay);
+    }
+
+    @Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
+        mCallbacks = (Callbacks) activity;
+    }
+
+    @Override
+    public void onDetach(){
+        super.onDetach();
+        mCallbacks=sDummyCallbacks;
     }
 
     void showDialog(){
@@ -61,5 +106,5 @@ public class DatePickerDialogFragment extends DialogFragment {
 
     public void doNegativeClick(){
 
-    }
+    }*/
 }
